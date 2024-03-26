@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GymTech360 - Login | Gym Member Management Portal: Effortlessly add, update, and manage member details with our comprehensive platform. Streamline registration, profile creation, and data management for enhanced efficiency. Boost customer engagement and retention through seamless member tracking. Join our vibrant community of fitness enthusiasts and gym owners today. Transform your gym management experience with our intuitive and user-friendly solution</title>
+        <link rel="shortcut icon" href="{% static 'images/gymlogo.png' %}" type="image/x-icon"> 
+        <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    </head>
+    <body id="loginbody">
+       <div class="gridlayout">
+        <div class="headercontent">
+            <div class="gymname">
+                <img src="{% static 'images/gymlogo.png' %}" alt="..">
+                <h1>GymTech360</h1>
+            </div>
+            <div class="headerlinks">
+                <a href='\'><button class="backbtn">Back to Home</button></a>
+            </div>
+           </div>
+       </div>
+        <section>
+            <div class="logindiv">
+                <img src="{% static 'images/loginicon.png' %}" alt="...">
+                <h1>Welcome Back!</h1>
+                <!-- code for error -->
+                {% if error %}
+                <h1>{{ error }}</h1>
+                {% endif %}
+
+                <form method="post">
+                    {% csrf_token %} <!-- middleware -->
+                    <div>
+                        <input type="text" name="username"
+                            placeholder="Enter your Username"><i
+                            class="fa fa-user"
+                            aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <input type="password" name="password"
+                            placeholder="Enter your Password"><i
+                            class="fa fa-eye-slash" aria-hidden="true"></i>
+                    </div>
+                    <button type="submit">Login</button>
+                    <p>Don't have an Account? <a href="/signup">Signup</a></p>
+                </form>
+            </div>
+        </section>
+    </body>
+</html>

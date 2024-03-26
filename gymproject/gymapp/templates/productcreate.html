@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymTech360 - Add User | Update User | Gym Member Management Portal: Effortlessly add, update, and manage member details with our comprehensive platform. Streamline registration, profile creation, and data management for enhanced efficiency. Boost customer engagement and retention through seamless member tracking. Join our vibrant community of fitness enthusiasts and gym owners today. Transform your gym management experience with our intuitive and user-friendly solution</title>
+    <link rel="shortcut icon" href="{% static 'images/gymlogo.png' %}" type="image/x-icon"> 
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+</head>
+<body id="createbody">
+    <div class="gridlayout">
+        <div class="headercontent">
+            <div class="gymname">
+                <img src="{% static 'images/gymlogo.png' %}" alt="..">
+                <h1>GymTech360</h1>
+            </div>
+            <div class="createpageheaderlinks">
+                <a href='\'><button class="backbtn">Home</button></a>
+                <a href="\view"><button class="backbtn">View Members</button></a>
+            </div>
+        </div>
+    </div>
+    <h1>Gym Member Details Form</h1>
+
+   <div class="creatememberdiv">
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="Enter your First Name" name="fname">
+        <input type="text" placeholder="Enter your Last Name" name="lname"><br>
+        <input type="tel" placeholder="Enter your Mobile Number" name="phone">
+        <input type="email" placeholder="Enter your Email" name="email"><br>
+        <label class="labelc">Joining Date : </label>
+        <input type="date" name="date">
+        <label class="genderlabel">Gender : </label>
+        <input type="radio" name="gender" value="Male"> <label>Male</label>
+        <input type="radio" name="gender" value="Female"> <label>Female</label>
+        <select placeholder="Enter your Subscription Plan" name="subscription">
+            <option value="h" disabled selected>Select Subscription Plan</option>
+            <option value="No Subscription">No Subscription</option>
+            <option value="3 months">3 months</option>
+            <option value="6 months">6 months</option>
+            <option value="9 months">9 months</option>
+            <option value="1 Year">1 Year</option>
+        </select>
+        <!-- <textarea placeholder="Type here" name="description"></textarea> -->
+        <button type="submit" class="backbtn">Submit</button>
+    </form>
+   </div>
+</body>
+</html>

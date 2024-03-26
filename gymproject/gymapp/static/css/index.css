@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sumana:wght@400;700&display=swap');
+/* font-family: "Poppins", sans-serif;
+font-family: "Sumana", serif; */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.gridlayout{
+    width: 95%;
+    margin: auto;
+}
+.topsection{
+    background: url('../images/gymhero.jpg');
+    height: 720px;
+    background-size: cover;
+}
+.gymname{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.gymname img{
+    width: 67px;
+}
+header{
+    /* position: sticky !important;
+   top: 0px !important;
+   z-index: 3 !important; */
+   background-color: black;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   padding: 5px;
+}
+header ul{
+    display: flex;
+    list-style-type: none;
+    gap: 75px;
+    font-size: 20px;
+    font-weight: 500;
+}
+header ul a{
+    text-decoration: none;
+    color: white;
+}
+.headerlinks button,.herocontent button,footer button,.logindiv button,.backbtn,.signupdiv button{
+    font-size: 20px;
+    padding: 3px 12px;
+    border: none;
+    border-radius: 3px;
+    background-color: #D1F928;
+    font-family: "Poppins", sans-serif
+}
+.headerlinks button:hover,.herocontent button:hover,footer button:hover,.logindiv button:hover,.backbtn:hover,.signupdiv button:hover{
+    background-color: white;
+}
+.headercontent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    padding: 4px 0px;
+}
+.headerlinks{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+.herocontent h1{
+    color: #D1F928;
+    font-family: "Poppins", sans-serif;
+    width: 52%;
+    font-size: 50px;
+    padding-top: 132px;
+}
+.herocontent p{
+    color: white;
+    font-family: "Sumana", serif; 
+    line-height: 1.3;
+    font-size: 16px;
+    width: 33%;
+    padding: 35px 0px;
+}
+.herocontent{
+    margin: 0px 64px 80px;
+}
+.abtcontent h1{
+    font-family: "Poppins", sans-serif;
+    font-size: 44px;
+    color: #D1F928;
+    
+}
+.abtcontent h3{
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+}
+.abtcontent p{
+    font-family: "Sumana", serif; 
+    font-size: 20px;
+  
+}
+.abtcontent span{
+    font-size: 30px;
+    font-weight: 800;
+}
+.abtcontent{
+    width: 65%;
+    margin: 20px auto 60px;
+    color: white;
+    /* text-align: center; */
+}
+#abtid{
+    background-color: black;
+    padding: 15px 0px;
+}
+footer{
+    background-color: black;
+}
+.footerdiv{
+    color: white;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    padding: 20px 0px;
+}
+.footerdiv p{
+    font-size: 18px;
+    padding: 30px 0px 10px;
+}
+footer h6{
+    color: white;
+    text-align: center;
+    padding: 15px 0px;
+    font-size: 15px;
+    font-family: "Sumana", serif; 
+}
+
+/* Login */
+#loginbody{
+    background: url(../images/loginbg.jpg);
+    background-repeat:no-repeat ;
+    background-size: cover;
+}
+.logindiv,.signupdiv{
+    color: white;
+    /* background-color: #ffffff21; */
+    border: 1px solid gray;
+    margin: 50px auto;
+    width: 26%;
+    padding: 30px;
+    text-align: center;
+}
+.logindiv img,.signupdiv img{
+    width: 30px;
+    margin: 10px 0px;
+}
+.logindiv h1,.signupdiv h1{
+    font-family: "Poppins", sans-serif;
+    font-size: 32px;
+    margin: 4px 0px 8px;
+}
+.logindiv input,.signupdiv input{
+    width: 252px;
+    padding: 3px 2px 1px;
+    height: 40px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+}
+.logindiv input:focus,.logindiv input:hover,.signupdiv input:focus,.signupdiv input:hover{
+    outline: none;
+    border-bottom: 2px solid #D1F928;
+    color: white;
+}
+.logindiv input::placeholder,.signupdiv input::placeholder{
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+.logindiv form div,.signupdiv form div{
+    position: relative;
+    margin: 3dvb 0px;
+}
+.logindiv p,.signupdiv p{
+    font-family: "Sumana", serif; 
+}
+.logindiv i,.signupdiv i{
+    position: absolute;
+    font-size: 15px;
+    top: 13px;
+    right: 47px;
+    color: white;
+}
+.logindiv button,.signupdiv button{
+    margin: 20px 0px;
+    padding: 3px 18px;
+    font-size: 18px;
+}
+.logindiv form p,.signupdiv form p{
+    font-family: "Sumana", serif;
+    font-size: 13px;
+}
+.logindiv form a,.signupdiv form a{
+    text-decoration: none;
+    color: #D1F928;
+}
+.logindiv form a:hover,.signupdiv form a:hover{
+    color: white;
+}
+.backbtn{
+    font-size: 16px !important;
+    margin: 12px;
+}
+
+/* signup */
+#signupbody{
+    background: url(../images/signupbg.jpg);
+    background-repeat:no-repeat ;
+    background-size: cover;
+}
+
+/* product create */
+
+#createbody{
+    background: url(../images/createformbg.jpg);
+    background-repeat:no-repeat ;
+    background-size: cover;
+}
+.creatememberdiv{
+    color: white;
+    width: 40%;
+    box-shadow: #a29f9f 0px 7px 29px 0px;
+    padding: 43px;
+    margin: 20px auto;
+}
+.creatememberdiv input,.creatememberdiv select{
+    width: 230px;
+    padding: 3px 2px 1px;
+    height: 40px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+}
+.creatememberdiv select{
+    padding: 3px 2px 1px 0px !important;
+}
+.creatememberdiv input:focus,.creatememberdiv input:hover{
+    outline: none;
+    border-bottom: 2px solid #D1F928;
+}
+.creatememberdiv option{
+    color: white;
+    background-color: black;
+    font-size: 10px;
+}
+.creatememberdiv input::placeholder,.creatememberdiv select,.creatememberdiv label{
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+.creatememberdiv input[type=radio]{
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    margin: 18px 3px;
+}
+.creatememberdiv input[type=date]{
+    width: 110px;
+    margin: 0px 15px 0px 0px;
+}
+.creatememberdiv input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 2px;
+    opacity: 1.6;
+    filter: invert(0.8);
+}
+.creatememberdiv select,.creatememberdiv input[type=text],.creatememberdiv input[type=email],.creatememberdiv input[type=tel]{
+    margin: 18px 15px;
+}
+.labelc{
+    margin: 0px 8px 0px 15px;
+}
+.creatememberdiv form .backbtn{
+    width: 44%;
+    padding: 7px 0px;
+    margin: 18px 15px;
+}
+.genderlabel{
+    margin: 0px 0px 0px 15px;
+}
+
+/* viewfile */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid black;
+}
+thead{
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+}
+th {
+    text-align: left;
+    padding: 8px;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+}
+td{
+    font-family: "Sumana", serif;
+    font-size: 17px;
+    text-align: left;
+    padding: 0px 8px;
+}
+tr:nth-child(even) {
+    background-color: #f2ecec;
+}
+#tablesection{
+    margin-top: 76px;
+}
+.updatelink{
+    color: #000080;
+}
+.deletelink{    
+    color: #800000;
+}
+.updatelink:hover,.deletelink:hover{
+    color: black;
+}
+
+/* delete */
+.deletediv{
+    width: 30%;
+    border: 1px solid black;
+    padding: 31px;
+    text-align: center;
+    margin: 100px auto;
+}
+.deletediv h3{
+    font-family: "Poppins", sans-serif;
+}
+.deletediv p{
+    font-family: "Poppins", sans-serif;
+    color: gray;
+}
+.deletediv span{
+    font-family: "Sumana", serif;
+    font-size:30px;
+    color: #000080;
+}
+.confirmbtn{
+    font-size: 18px;
+    padding: 3px 12px;
+    border: 1.5px solid rgb(136, 9, 9);
+    border-radius: 3px;
+    font-family: "Poppins", sans-serif;
+    background-color:white;
+    margin: 20px 6px;
+}
+.confirmbtn:hover{
+    border: 1.5px solid #D1F928;
+}
+
+@media screen and (max-width:500px) {
+    .headercontent,.headerlinks {
+        display: block;
+    }
+    .topsection {
+        height: 384px;
+        background-position-x: -212px;
+        background-repeat: no-repeat;
+    }
+    .herocontent {
+        margin: 129px 16px 21px;
+    }
+    .herocontent h1 {
+        font-size: 20px;
+        padding-top: 24px;
+        width: 86%;
+    }
+    .herocontent p {
+        font-size: 12px;
+        width: 62%;
+    }
+    .headerlinks button, .herocontent button, footer button, .logindiv button, .backbtn, .signupdiv button {
+        font-size: 17px;
+    }
+    .abtcontent {
+        width: 85%;
+        margin: 20px auto;
+    }
+    .abtcontent h1 {
+        font-size: 23px;
+    }
+    .abtcontent span {
+        font-size: 22px;
+    }
+    .abtcontent p {
+        font-size: 13px;
+    }
+    #createbody {
+        background-size: 1450px;
+        background-position-x: center;
+    }
+    .creatememberdiv {
+        width: 75%;
+        padding: 15px;
+        margin: 0px auto;
+    }
+    #tablesection {
+        margin-top: 130px;
+        overflow-x: hidden;
+    }
+    th {
+        padding: 3px;
+        font-size: 8px;
+    }
+    td{
+        font-size: 7px;
+    }
+    .logindiv, .signupdiv {
+        margin: 50px auto;
+        width: 95%;
+    }
+    .deletediv {
+        width: 80%;
+        margin: 140px auto;
+    }
+}
+
+@media screen and (min-width:700px) and (max-width:850px) {
+    .headercontent {
+        display: block;
+    }
+    .herocontent h1 {
+        width: 64%;
+        font-size: 27px;
+        padding-top: 153px;
+    }
+    .topsection{
+        height: 572px;
+        background-position-x: center;
+    }
+    .herocontent p {
+        width: 53%;
+    }
+    .headerlinks button, .herocontent button, footer button, .logindiv button, .backbtn, .signupdiv button {
+        font-size: 17px;
+    }
+    .abtcontent {
+        width: 82%;
+        margin: 20px auto;
+    }
+    .abtcontent h1 {
+        font-size: 36px;
+    }
+    #createbody {
+        background-position-x: center;
+        height: 894px;
+    }
+    .creatememberdiv {
+        width: 75%;
+        padding: 35px;
+        margin: 20px auto;
+    }
+    #tablesection {
+        margin-top: 130px;
+    }
+    th {
+        font-size: 15px;
+    }
+    td {
+        font-size: 14px;
+    }
+    .deletediv {
+        width: 46%;
+        margin: 143px auto;
+    }
+    .logindiv, .signupdiv {
+        width: 46%;
+    }
+}
+

@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymTech360 - View User Details | Gym Member Management Portal: Effortlessly add, update, and manage member details with our comprehensive platform. Streamline registration, profile creation, and data management for enhanced efficiency. Boost customer engagement and retention through seamless member tracking. Join our vibrant community of fitness enthusiasts and gym owners today. Transform your gym management experience with our intuitive and user-friendly solution</title>
+    <link rel="shortcut icon" href="{% static 'images/gymlogo.png' %}" type="image/x-icon"> 
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+</head>
+<body id="viewbody">
+    <header>
+        <div class="gridlayout">
+            <div class="headercontent">
+                <div class="gymname">
+                    <img src="{% static 'images/gymlogo.png' %}" alt="..">
+                    <h1>GymTech360</h1>
+                </div>
+                <div class="viewpageheaderlinks">
+                    <a href='\'><button class="backbtn">Home</button></a>
+                    <a href='\create'><button class="backbtn">Add Member</button></a>
+                </div>
+               </div>
+        </div>
+    </header>
+    <main>
+        <section id="tablesection">
+            <table class="sortable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Contact No</th>
+                        <th>Email ID</th>
+                        <th>Subscription</th>
+                        <th>Gender</th>
+                        <th>Joining Date</th>
+                    </tr>
+                </thead>
+                {% for item in items %}
+                <tr>
+                    <td>{{ item.fname }} {{ item.lname }}</td>
+                    <td>{{ item.phone }}</td>
+                    <td>{{ item.email }}</td>
+                    <td>{{ item.subscription }}</td>
+                    <td>{{ item.gender }}</td>
+                    <td>{{ item.date }}</td>
+                    <td><a href="{% url 'update' item.id %}" class="updatelink">update</a></td>
+                    <td><a href="{% url 'delete' item.id %}" class="deletelink">Delete</a></td>
+                </tr>
+                <!-- <li>{{ item.lname }} - {{ item.fname }} - {{ item.phone }} - {{ item.email }} - {{ item.subscription }} - {{ item.gender }} - {{ item.date }}</li> -->
+                {% endfor %}
+            </table>
+        </section>
+    </main>
+</body>
+</html>
